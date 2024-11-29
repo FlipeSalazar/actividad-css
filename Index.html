@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Principal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Menu Principal</h1>
+    </header>
+    <main>
+        <section id="inicio" class="contenedor visible">
+            <button onclick="mostrarSeccion('catalogo')">catalogo </button>
+            <button onclick="mostrarSeccion('calidad')">calidad</button>
+            <button onclick="mostrarSeccion('presentaciones')">Presentaciones</button>
+            <button onclick="mostrarSeccion('adquirir')">Registro de Pedido</button>
+        </section>
+        <section id="catalogo" class="contenedor">
+            <h2>Perfumes</h2>
+           
+            <ol>
+                <li><img src="x.jpg">Fragancia X</li>
+                <li><img src="z.jpg">Fragancia Z</li>
+                <li><img src="h.jpg">Fragancia H</li>
+            </ol>
+       
+            <button onclick="mostrarSeccion('inicio')">Volver</button>
+        </section>
+        <section id="calidad" class="contenedor">
+            <h2>Calidades de Perfumes y Consentraciones</h2>
+            <ul>
+            <section class=".section-interna">
+                <li>Fragancia original 100%</li>
+                <li>Fragancia 1.1</li>
+                <li>Fragancia Premium</li>
+            </section>
+
+            <section class=".section-interna">
+                 <li>Concentracion EdC </li>
+                  <li>Concentracion EdT</li>
+                   <li>Concentracion EdP</li>
+            </section>
+
+            </ul>
+            <button onclick="mostrarSeccion('inicio')">Volver</button>
+        </section>
+        
+        <section id="presentaciones" class="contenedor">
+            <h2>Tabla de Presentaciones</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th><img src="x.jpg" >X</th>
+                        <th><img src="z.jpg">Z</th>
+                        <th><img src="h.jpg">H</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dato 1</td>
+                        <td>Dato 2</td>
+                        <td>Dato 3</td>
+                    </tr>
+                    <tr>
+                        <td>Dato A</td>
+                        <td>Dato B</td>
+                        <td>Dato C</td>
+                    </tr>
+               
+                    <tr>
+                        <td>Dato A</td>
+                        <td>Dato B</td>
+                        <td>Dato C</td>
+                    </tr>
+                
+                </tbody>
+            </table>
+            <button onclick="mostrarSeccion('inicio')">Volver</button>
+        </section>
+
+        <section id="adquirir" class="contenedor">
+            <h2>Registro de Pedido</h2>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input id="nombre" name="nombre" type="text" required>
+                <label for="email">Correo Electrónico:</label>
+                <input id="email" name="email" type="email" required>
+                <fieldset>
+                    <legend>Género:</legend>
+                    <label><input name="genero" type="radio" value="masculino"> Masculino</label>
+                    <label><input name="genero" type="radio" value="femenino"> Femenino</label>
+                </fieldset>
+                <label for="pais">País:</label>
+                <select id="pais" name="pais">
+                    <option value="mx">México</option>
+                    <option value="us">Estados Unidos</option>
+                    <option value="es">España</option>
+                </select>
+                <button type="submit">Enviar</button>
+            </form>
+            <button onclick="mostrarSeccion('inicio')">Volver</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Derechos Reservados</p>
+    </footer>
+    <script>
+        function mostrarSeccion(seccionId) {
+            document.querySelectorAll('.contenedor').forEach((seccion) => {
+                seccion.classList.remove('visible');
+            });
+            document.getElementById(seccionId).classList.add('visible');
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
